@@ -1,11 +1,14 @@
 import React from 'react'
-import 'common/css/index.css'
+import Rindex from 'router'
+import {HashRouter as Router} from 'react-router-dom'
+
 class App extends React.Component{
     render(){
         return <div>
-            hello react
+            <Router>
+               <Rindex></Rindex>
+            </Router>
         </div>
     }
 }
-
 export default App;
