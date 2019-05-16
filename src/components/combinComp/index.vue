@@ -8,7 +8,7 @@
             <p>{{item.subTitle}}</p>
             <div class="addShop">
                 <b>￥{{item.dayRent}}/天 </b>
-                <button @click="addShop(item)">加入购物车</button>
+                <button @click="addShop(Object)">加入购物车</button>
             </div>
         </dd>
     </dl>

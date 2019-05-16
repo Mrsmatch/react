@@ -28,7 +28,15 @@ export default {
         }
     },
     computed:{
-
+        goBack(){
+            if(this.opacity){
+                if(this.option!==undefined&&this.option.router!==undefined){
+                    this.$router.push(this.option.router);
+                }else{
+                }
+            }
+        }
+    },
     },
     methods:{
 

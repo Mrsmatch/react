@@ -26,7 +26,7 @@ export default {
         }
     },
     mounted(){
-        getBannList("/getBannList").then(res=>{
+        getBannList("/getBann").then(res=>{
             this.imgList=res.data.data
         })
     }

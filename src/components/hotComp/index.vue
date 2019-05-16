@@ -37,11 +37,22 @@ export default {
             this.$router.push({
                 name:"shoplist",
                 params:{
-                    item:this.item
+                    item:item
                 }
             })
         },
-        addShop(item){
+        // 
+        goBack(){
+                if(this.opacity){
+                    if(this.option!==undefined&&this.option.router!==undefined){
+                        this.$router.push(this.option.router);
+                    }else{
+                        this.$router.go(-1);
+                    }
+                }
+            }
+        },
+        addShop(code){
             let token=this.$cookie.get("token");
             if(token){
                 isToken(`/isToken?token=${token}`).then(res=>{
@@ -51,7 +62,7 @@ export default {
                             return i.ID===item.ID;
                         })
                         if(hasItem.length<1){
-                            hotList.push({...item,flag:true,count:1});
+                            hotList.push({...count,flag:true,count:1});
                         }
                         this.$store.commit("updataHotList",hotList);
                     }

@@ -16,16 +16,7 @@ export default {
         }
     },
     methods:{
-        goBack(){
-            if(this.opacity){
-                if(this.option!==undefined&&this.option.router!==undefined){
-                    this.$router.push(this.option.router);
-                }else{
-                    this.$router.go(-1);
-                }
-            }
-        }
-    },
+        
     mounted(){
         if(this.option!==undefined&&this.option.left!==undefined){
             this.opacity=0;

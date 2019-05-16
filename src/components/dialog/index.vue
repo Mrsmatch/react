@@ -7,7 +7,7 @@
             </h4>
             <div class="con">{{content}}</div>
             <div class="d_footer">
-                <span @click="login">{{sure}}</span>
+                <span @click="login">{{content}}</span>
                 <span @click="close">取消</span>
                 <p></p>
             </div>
@@ -30,9 +30,7 @@ export default {
         }
     },
     methods:{
-        close(){
-            this.$store.commit("updateDialog", false);
-        },
+        
         login(){
             if(this.content==="请登录"){
                 this.$router.push("/handle/login");
